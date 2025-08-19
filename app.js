@@ -22,7 +22,15 @@ function agregarAmigo() {
     console.log(nombreAmigo);
     console.log(amigos);
 
+    //Limpiamos el input con la función de limpieza
+    limpiarInput();
 
+    return
+}
 
+//Función para limpiar el input
+function limpiarInput() {
+
+    document.querySelector('#amigo').value = '';
     return
 }
