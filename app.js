@@ -24,6 +24,7 @@ function agregarAmigo() {
 
     //Limpiamos el input con la función de limpieza
     limpiarInput();
+    mostrarListaDeAmigos();
 
     return
 }
@@ -33,4 +34,26 @@ function limpiarInput() {
 
     document.querySelector('#amigo').value = '';
     return
+}
+
+//Función para mostrar los nombres de amigos ingresados
+function mostrarListaDeAmigos() {
+
+    //Capturamos la lista de html en la variable listaDeAmigosHtml
+    let listaDeAmigosHtml = document.getElementById('listaAmigos');
+    //Limpiamos la lista
+    listaDeAmigosHtml.innerHTML = '';
+
+    //Recorremos la lista amigos y creamos los elementos <li> en html
+    for (let i = 0; i<amigos.length ; i++) {
+
+        //Creamos los elementos de la lista
+        let amigoIngresado = document.createElement('li');
+        let texto = document.createTextNode(amigos[i]);
+        amigoIngresado.appendChild(texto);
+
+        //Los agregamos a la lista html
+        listaDeAmigosHtml.appendChild(amigoIngresado);
+    }
+
 }
