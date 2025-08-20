@@ -57,3 +57,32 @@ function mostrarListaDeAmigos() {
     }
 
 }
+
+//Función para sortear amigos
+function sortearAmigo() {
+
+    //Validar que la lista amigos no esté vacía
+    if (amigos.length == 0) {
+        alert('No se han añadido amigos para sortear.');
+    } else {
+        if (amigos.length == 1) {
+            alert('Sólo añadió un amigo. Ingrese más de uno para el sorteo.');
+        } else {
+
+            //Generar número aleatorio para obtener el índice del amigo sorteado
+            
+            let i = Math.floor(Math.random()*amigos.length);
+            console.log(i);
+
+            //Obtengo el nombre del amigo sorteado
+            let amigoSecreto = amigos[i];
+            console.log(amigoSecreto);
+
+            //Mostramos el resultado
+            let resultadoHtml = document.getElementById('resultado');
+            resultadoHtml.innerHTML = amigoSecreto;
+
+        }
+    }
+
+}
