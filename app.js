@@ -19,8 +19,9 @@ function agregarAmigo() {
         amigos.push(nombreAmigo);
     }
 
-    console.log(nombreAmigo);
-    console.log(amigos);
+    //Lineas comentadas utilizadas para mostrar la salida del código por la consola del desarrollador.
+    //console.log(nombreAmigo);
+    //console.log(amigos);
 
     //Limpiamos el input con la función de limpieza
     limpiarInput();
@@ -56,6 +57,7 @@ function mostrarListaDeAmigos() {
         listaDeAmigosHtml.appendChild(amigoIngresado);
     }
 
+    return
 }
 
 //Función para sortear amigos
@@ -72,11 +74,15 @@ function sortearAmigo() {
             //Generar número aleatorio para obtener el índice del amigo sorteado
             
             let i = Math.floor(Math.random()*amigos.length);
-            console.log(i);
+
+            //Linea comentada utilizada para mostrar la salida del código por la consola del desarrollador.
+            //console.log(i);
 
             //Obtengo el nombre del amigo sorteado
             let amigoSecreto = amigos[i];
-            console.log(amigoSecreto);
+
+            //Linea comentada utilizada para mostrar la salida del código por la consola del desarrollador.
+            //console.log(amigoSecreto);
 
             //Mostramos el resultado
             let resultadoHtml = document.getElementById('resultado');
@@ -85,4 +91,5 @@ function sortearAmigo() {
         }
     }
 
+    return
 }
